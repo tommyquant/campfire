@@ -1,0 +1,1 @@
+# guitargeki-config
