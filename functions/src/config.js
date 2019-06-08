@@ -13,8 +13,8 @@ async function getConfig(appName, environment) {
     const priority = [
         `${basePath}/${appName}/${environment}`,
         `${basePath}/${appName}/common`,
-        `${basePath}/common/${environment}`,
-        `${basePath}/common/common`
+        `${basePath}/global/${environment}`,
+        `${basePath}/global/common`
     ];
 
     // Get all configs and perform a deep merge so that the highest priority
