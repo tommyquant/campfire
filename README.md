@@ -22,11 +22,11 @@ You will need to provide this password whenever making a request to the web API.
 
 Campfire Secrets uses Realtime Database to store secrets. To create a new Realtime Database, open your project in the Firebase console and open the **Database** page. Scroll down to Realtime Database and click **Create database**.
 
-![Create Realtime Database screenshot](docs/images/01.png)
+![Create Realtime Database](docs/images/01.PNG)
 
 Firebase will give you a choice between locked mode and test mode. Since you will not read or write using the database API, select **locked mode**. Your database will be created and you will see the following:
 
-![Initial database screenshot](docs/images/02.png)
+![Initial database](docs/images/02.PNG)
 
 To start, create a new child and name it `configs`. All of your secrets will go under this object.
 
@@ -34,7 +34,7 @@ To start, create a new child and name it `configs`. All of your secrets will go 
 
 From here, you can create a new object for each application. For example, you could create a `database` object which stores all secrets for your database such as usernames, passwords, ports etc. Let's try that now by creating the following structure:
 
-![Database secrets example](docs/images/03.png)
+![Database secrets example](docs/images/03.PNG)
 
 Notice how the secrets are stored under a `common` object. Any secrets stored under a `common` object are shared between all environments *unless* they are overriden by an environment.
 
@@ -42,7 +42,7 @@ Notice how the secrets are stored under a `common` object. Any secrets stored un
 
 Often, you'll want to have different secrets between your development and production environments. For example, if you wanted Bob to use a different password while developing locally, you could create a new `development` environment. To do this, add a `development` object under `database` and specify a new value for his password.
 
-![Environment secrets example](docs/images/04.png)
+![Environment secrets example](docs/images/04.PNG)
 
 Now, when you request the database secrets and specify your environment as development, you will retrieve all the common secrets *except* for Bob's password which was overridden.
 
@@ -52,7 +52,7 @@ Global secrets are shared between all applications and can be overridden per app
 
 To create global secrets, simply create a `global` object under `configs` and add a `common` object under it.
 
-![Global secrets example](docs/images/05.png)
+![Global secrets example](docs/images/05.PNG)
 
 Now, if you were to request the database secrets, you would also receive the API key as well.
 
