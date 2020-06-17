@@ -1,6 +1,6 @@
-# Campfire Secrets
+# Campfire
 
-Campfire Secrets is a cloud-based secrets manager than runs on Firebase Cloud Functions (which runs Node.js). It was created as a free, basic alternative to paid or self-hosted secrets managers such as AWS Secrets Manager, Google's Cloud KMS, Hashicorp's Vault, Pinterest's Knox etc.
+Campfire is a cloud-based secrets manager that runs on Firebase Cloud Functions (which runs Node.js). It was created as a free, basic alternative to paid or self-hosted secrets managers such as AWS Secrets Manager, Google's Cloud KMS, Hashicorp's Vault, Pinterest's Knox etc.
 
 Campfire features the following:
  - Web API, enabling any application that can make HTTP requests to retrieve secrets.
@@ -8,7 +8,7 @@ Campfire features the following:
 
 ## Installation
 
-To use Campfire Secrets, clone this repository and follow Firebase's [Getting Started](https://firebase.google.com/docs/functions/get-started) tutorial for Cloud Functions to deploy.
+To use Campfire, clone this repository and follow Firebase's [Getting Started](https://firebase.google.com/docs/functions/get-started) tutorial for Cloud Functions to deploy.
 
 Before deploying for the first time, set the password using:
 
@@ -20,7 +20,7 @@ You will need to provide this password whenever making a request to the web API.
 
 ## Adding Secrets
 
-Campfire Secrets uses Realtime Database to store secrets. To create a new Realtime Database, open your project in the Firebase console and open the **Database** page. Scroll down to Realtime Database and click **Create database**.
+Campfire uses Realtime Database to store secrets. To create a new Realtime Database, open your project in the Firebase console and open the **Database** page. Scroll down to Realtime Database and click **Create database**.
 
 ![Create Realtime Database](docs/images/01.PNG)
 
